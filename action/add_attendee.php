@@ -24,7 +24,6 @@ if ($conn->connect_error) {
 }
 
 $event_name = "";
-$event_date = "";
 
 // Make sure event is owned by user
 $sql = $conn->prepare("SELECT * FROM events WHERE id = ? AND user_id = ?;");
@@ -35,7 +34,6 @@ if ($result = $sql->get_result()) {
     while ($row = $result->fetch_assoc()) {
         $passed_check = $row["id"] == $event_id;
         $event_name = $row["name"];
-        $event_date = $row["event_date"];
     }
 }
 
@@ -83,7 +81,7 @@ if ($attendee_email != null) {
     $mail->isHTML(true);
 
     $mail->Subject = "RSVP to $event_name";
-    $mail->Body = "<h1>You have been invited to $event_name at $event_date!</h1><br><br><h3>Please RSVP to <a href='mailto:$organizer_email'>$organizer_email</a></h3><br><br><p><strong>You can RSVP with <a href='$rsvp_link'>our online tool here.</a></strong></p><p>If the above link does not work, please copy and paste $rsvp_link in your browser.</p>";
+    $mail->Body = "<h1>You have been invited to $event_name</h1><br><br><h3>Please RSVP to <a href='mailto:$organizer_email'>$organizer_email</a></h3><br><br><p><strong>You can RSVP with <a href='$rsvp_link'>our online tool here.</a></strong></p><p>If the above link does not work, please copy and paste $rsvp_link in your browser.</p>";
     $mail->AltBody = "You have been invited to $event_name. Please RSVP to $organizer_email with our online tool here: $rsvp_link";
     $mail->send();
 }
