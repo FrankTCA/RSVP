@@ -1,0 +1,33 @@
+.btn-group button {
+    background-color: floralwhite;
+    border: 1px solid black;
+    padding: 10px 24px;
+    cursor: pointer;
+    float: left;
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none;
+}
+
+.btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.btn-group {
+    border: 1px solid black;
+    border-radius: 7px;
+}
+
+.btn-group:hover {
+    background-color: grey;
+}
+
+textarea {
+    background-color: floralwhite;
+    border: 1px solid black;
+    border-radius: 3px;
+    resize: none;
+}

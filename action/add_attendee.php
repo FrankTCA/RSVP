@@ -64,6 +64,8 @@ if ($result = $attendee_data_sql->get_result()) {
     }
 }
 
+$conn->close();
+
 $rsvp_link = "https://infotoast.org/rsvp/rsvp.php?t=$token";
 
 if ($attendee_email != null) {

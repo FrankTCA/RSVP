@@ -44,6 +44,8 @@ if ($result = $lastSQLId->get_result()) {
     }
 }
 
+$conn->close();
+
 if ($event_id === null) {
     http_response_code(500);
     die("Query did not properly perform!");

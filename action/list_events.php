@@ -33,4 +33,6 @@ if ($result = $sql->get_result()) {
     }
 }
 
+$conn->close();
+
 echo "], \"count\": $count}";

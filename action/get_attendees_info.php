@@ -83,6 +83,8 @@ if ($result2 = $sql2->get_result()) {
     }
 }
 
+$conn->close();
+
 echo "], \"total\": " . $count . ", ";
 echo "\"responded\": " . $count_responded . ", ";
 echo "\"not_responded\": " . $count_not_responded . ", ";
