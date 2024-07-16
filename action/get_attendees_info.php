@@ -1,4 +1,7 @@
 <?php
+require "../../sso/common.php";
+require "../creds.php";
+require "common.php";
 
 if (!isset($_GET["event_id"])) {
     http_response_code(400);

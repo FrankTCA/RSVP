@@ -1,4 +1,7 @@
 <?php
+require "../creds.php";
+require "../../sso/common.php";
+require "common.php";
 if (!(isset($_POST["event_id"]) && isset($_POST["attendee_id"]) && isset($_POST["response"]))) {
     http_response_code(400);
     die("noinfo");

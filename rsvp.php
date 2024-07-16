@@ -1,4 +1,7 @@
 <?php
+require "creds.php";
+require "action/common.php";
+
 if (!isset($GET["t"])) {
     http_response_code(400);
     die("Token not set! Please copy the whole link, including the text after ?t=");

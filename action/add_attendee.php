@@ -1,4 +1,7 @@
 <?php
+require "../../sso/common.php";
+require "../creds.php";
+require "common.php";
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 require 'PHPMailer/src/Exception.php';
