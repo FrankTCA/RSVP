@@ -24,10 +24,3 @@
 .btn-group:hover {
     background-color: grey;
 }
-
-textarea {
-    background-color: floralwhite;
-    border: 1px solid black;
-    border-radius: 3px;
-    resize: none;
-}

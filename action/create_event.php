@@ -3,7 +3,7 @@ require "../../sso/common.php";
 require "../creds.php";
 require "common.php";
 
-if (!(isset($_POST["name"]) && isset($_POST["date"]) && isset($_POST["location"]) && isset($_POST["description"]))) {
+if (!(isset($_POST["name"]) && isset($_POST["date"]) && isset($_POST["description"]))) {
     http_response_code(400);
     die("noinfo");
 }
@@ -51,4 +51,4 @@ if ($event_id === null) {
     die("Query did not properly perform!");
 }
 
-echo "success," . $event_id;
+header("Location: https://infotoast.org/rsvp/event.php?id=" . $event_id);

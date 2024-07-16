@@ -56,6 +56,7 @@ $get_info_sql->bind_param("ssi", $ip, $clientcountry, $attendee_id);
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="resources/css/global.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/module.css">
     <link rel="stylesheet" type="text/css" href="resources/css/rsvp.css">
     <script type="text/javascript" src="resources/js/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="resources/js/jquery-ui.min.js"></script>
