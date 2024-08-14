@@ -122,3 +122,28 @@ text {
 #loginText {
     text-transform: capitalize;
 }
+
+.continuebtn {
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    float: right;
+    padding-right: -20%;
+    justify-content: right;
+    right: 10%;
+    bottom: 5%;
+}
+
+.continue {
+    border: 3px solid limegreen;
+    background-color: whitesmoke;
+    padding: 20%;
+    margin-top: 10%;
+    font-family: "Roboto", sans-serif;
+    transition: 0.3s;
+}
+
+.continue:hover {
+    background-color: limegreen;
+    color: white;
+}
