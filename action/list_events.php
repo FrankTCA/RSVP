@@ -24,11 +24,32 @@ if ($result = $sql->get_result()) {
         if ($count != 0) {
             echo ", ";
         }
+        $sql2 = $conn->prepare("SELECT COUNT(id) as count FROM attendees WHERE event_id = ? AND accessed = 1;");
+        $sql2->bind_param("i", $row["id"]);
+        $sql2->execute();
         echo "{\"id\": " . $row["id"] . ", ";
         echo "\"name\": \"" . $row["name"] . "\", ";
         echo "\"location\": \"". $row["location"] . "\", ";
         echo "\"date\": \"" . $row["event_date"] . "\", ";
-        echo "\"description\": \"" . $row["description"] . "\"}";
+        echo "\"description\": \"" . $row["description"] . "\"";
+        if ($result2 = $sql2->get_result()) {
+            while ($row2 = $result2->fetch_assoc()) {
+                echo ", \"responses\": " . $row2["count"];
+                $sql3 = $conn->prepare("SELECT COUNT(id) as count FROM attendees WHERE event_id = ?;");
+                $sql3->bind_param("i", $row["id"]);
+                $sql3->execute();
+                if ($result3 = $sql3->get_result()) {
+                    while ($row3 = $result3->fetch_assoc()) {
+                        echo ", \"attendees\": " . $row3["count"];
+                    }
+                } else {
+                    echo ", \"attendees\": 0";
+                }
+            }
+        } else {
+            echo ", \"responses\": 0, \"attendees\": 0";
+        }
+        echo "}";
         $count++;
     }
 }

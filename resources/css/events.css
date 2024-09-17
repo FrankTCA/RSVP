@@ -1,0 +1,79 @@
+body {
+    font-family: "Roboto Light", sans-serif;
+    /*background-color: #12121f;*/
+    color: black;
+}
+.event {
+    padding: 10px;
+    border: 1px solid black;
+    background-color: grey;
+    color: white;
+    min-width: 50%;
+    margin: 0;
+}
+
+.event .eventNameDesc {
+    display: inline-block;
+    margin: 1em;
+}
+
+.date {
+    text-align: center;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.event button {
+    display: inline-block;
+}
+
+.event .controlButtons {
+    display: inline-block;
+}
+
+.eventSeperator {
+    display: inline-block;
+    padding-right: 3em;
+}
+
+.eventbtn {
+    display: inline-block;
+    padding: 0.5em 1em 0.5em 1em;
+    margin-right: 0.5em;
+    margin-bottom: 2em;
+    vertical-align: middle;
+    border: 1px solid cornflowerblue;
+    background-color: white;
+    box-shadow: black 1px 1px;
+}
+
+.eventName {
+    text-transform: uppercase;
+    font-size: xx-large;
+}
+
+.eventLoc {
+    margin-top: 3em;
+    margin-left: 1em;
+}
+
+.event button:hover {
+    background-color: cornflowerblue;
+}
+
+.event button:active {
+    box-shadow: black 0 0;
+}
+
+.event:hover:not(:has(.task:hover)) { /* Todo: This only works for newer (2023 +) versions of browsers. Implement this another way. */
+    padding: 10px;
+    border: 1px solid black;
+    background-color: darkgrey;
+    color: white;
+    min-width: 50%;
+    margin: 0;
+}
+#eventsList {
+    list-style-type: none;
+    padding-left: 0;
+}

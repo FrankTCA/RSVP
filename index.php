@@ -4,8 +4,6 @@ require "creds.php";
 require "action/common.php";
 
 validate_token("https://infotoast.org/rsvp/");
-$uid = get_user_id();
-$username = get_username();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,8 +14,10 @@ $username = get_username();
     <link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="resources/css/global.css">
     <link rel="stylesheet" type="text/css" href="resources/css/module.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/events.css">
     <script type="text/javascript" src="resources/js/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="resources/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="resources/js/index.js"></script>
     <title>RSVP - Your Events</title>
 </head>
 <body>
