@@ -84,6 +84,7 @@ if ($result = $event_details_sql->get_result()) {
     </div>
     <div class="eventDetails" id="editingEvtDetails">
         <form action="action/edit_event.php" method="POST">
+            <input type="hidden" name="id" value="<?php echo $event_id ?>">
             <p>Event Name: <input type="text" value="<?php echo $event_name ?>" name="name"</p>
             <p>Event Date/Time: <input type="text" value="<?php echo $event_date ?>" name="date"</p>
             <p>Event Location: <input type="text" value="<?php echo $event_location ?>" name="location"</p>
