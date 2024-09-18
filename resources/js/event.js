@@ -2,6 +2,7 @@ var global_attendees = [];
 var attendees_count;
 
 function parseAttendeesJSON(responseJson) {
+    responseJson = JSON.parse(responseJson);
     global_attendees = responseJson.responses;
     attendees_count = responseJson.total;
 }

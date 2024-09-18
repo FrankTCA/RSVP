@@ -104,8 +104,8 @@ if ($result = $event_details_sql->get_result()) {
     <div class="inviteAttendeesForm">
         <p><label for="inviteeName">Name: </label><input type="text" id="inviteeName" name="inviteeName" placeholder="Name"></p>
         <p><label for="inviteeEmail">Email (Optional, will send email to invitee if specified): </label><input type="text" id="inviteeEmail" name="inviteeEmail" placeholder="invitee@example.com"</p>
-        <div class="continuebtn">
-            <button class="continue" id="inviteButton" onclick="send_invite()">Invite</button>
+        <div class="editBtnDiv">
+            <button class="editBtn" id="inviteButton" onclick="send_invite()">Invite</button>
         </div>
     </div>
     <div class="iconBodyHeader">

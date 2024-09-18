@@ -65,7 +65,7 @@ if ($result2 = $sql2->get_result()) {
         } else {
             $count_not_responded++;
         }
-        echo "\"response\": " . $row["response"] . ", ";
+        echo "\"response\": " . $row["response"];
         if ($row["response"] != 0) {
             if ($row["response"] == 1) {
                 $count_yes++;
@@ -75,9 +75,9 @@ if ($result2 = $sql2->get_result()) {
                 $count_maybe++;
             }
             if ($row["response_note"] != null && $row["response_note"] != "") {
-                echo "\"response_note\": \"" . $row["response_note"] . "\"";
+                echo ", \"response_note\": \"" . $row["response_note"] . "\"";
             } else {
-                echo "\"response_note\": null";
+                echo ", \"response_note\": null";
             }
         } else {
             $count_unanswered++;
