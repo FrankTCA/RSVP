@@ -50,8 +50,11 @@ if ($result = $event_details_sql->get_result()) {
     <link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="resources/css/global.css">
     <link rel="stylesheet" type="text/css" href="resources/css/module.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/events.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/event.css">
     <script type="text/javascript" src="resources/js/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="resources/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="resources/js/event.js"></script>
     <title>Viewing <?php echo $event_name ?></title>
 </head>
 <body>
@@ -79,12 +82,12 @@ if ($result = $event_details_sql->get_result()) {
         <p>You made event at: <strong><?php echo $date_created ?></strong></p>
         <p>Additional Description: <strong><?php echo $description ?></strong></p>
         <div class="continuebtn">
-            <button class="continue" id="editEventButton" onclick="edit_event(<?php echo $event_id ?>)">Edit</button>
+            <button class="continue" id="editEventButton" onclick="edit_event()">Edit</button>
         </div>
     </div>
     <div class="eventDetails" id="editingEvtDetails">
         <form action="action/edit_event.php" method="POST">
-            <input type="hidden" name="id" value="<?php echo $event_id ?>">
+            <input id="eventIdHiddenField" type="hidden" name="id" value="<?php echo $event_id ?>">
             <p>Event Name: <input type="text" value="<?php echo $event_name ?>" name="name"</p>
             <p>Event Date/Time: <input type="text" value="<?php echo $event_date ?>" name="date"</p>
             <p>Event Location: <input type="text" value="<?php echo $event_location ?>" name="location"</p>
@@ -102,7 +105,7 @@ if ($result = $event_details_sql->get_result()) {
         <p><label for="inviteeName">Name: </label><input type="text" id="inviteeName" name="inviteeName" placeholder="Name"></p>
         <p><label for="inviteeEmail">Email (Optional, will send email to invitee if specified): </label><input type="text" id="inviteeEmail" name="inviteeEmail" placeholder="invitee@example.com"</p>
         <div class="continuebtn">
-            <button class="continue" id="inviteButton">Invite</button>
+            <button class="continue" id="inviteButton" onclick="send_invite()">Invite</button>
         </div>
     </div>
     <div class="iconBodyHeader">

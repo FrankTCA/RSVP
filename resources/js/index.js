@@ -25,13 +25,13 @@ function open_event(id) {
 }
 
 function display_event(event) {
-    evt_id = event.id;
-    evt_name = event.name;
-    evt_loc = event.location;
-    evt_date = event.date;
-    evt_desc = event.description;
-    evt_responses = event.responses;
-    evt_attendees = event.responses;
+    let evt_id = event.id;
+    let evt_name = event.name;
+    let evt_loc = event.location;
+    let evt_date = event.date;
+    let evt_desc = event.description;
+    let evt_responses = event.responses;
+    let evt_attendees = event.responses;
     print_event(evt_id, evt_name, evt_loc, evt_date, evt_desc, evt_responses, evt_attendees);
 }
 

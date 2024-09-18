@@ -56,6 +56,7 @@ if ($result2 = $sql2->get_result()) {
 
         echo "{\"name\": \"" . $row["name"] . "\", ";
         echo "\"date_added\": \"" . $row["date_added"] . "\", ";
+        echo "\"token\": \"" . $row["token"] . "\", ";
         echo "\"accessed\": " . $row["accessed"] . ", ";
         if ($row["accessed"]) {
             $count_responded++;

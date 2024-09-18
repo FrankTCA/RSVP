@@ -1,0 +1,11 @@
+.response {
+    margin-top: 3em;
+    margin-left: 1em;
+}
+
+.responseNoteLinkSpan {
+    margin-top: 3em;
+    margin-left: 1em;
+    color: cornflowerblue;
+    text-decoration-line: none;
+}
