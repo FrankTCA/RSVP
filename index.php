@@ -41,12 +41,13 @@ validate_token("https://infotoast.org/rsvp/");
     <form id="createEventForm" action="action/create_event.php" method="post">
         <label for="eventNameBox">Event Name: </label>
         <input type="text" name="name" id="eventNameBox" placeholder="Event name here..."><br>
-        <label for="eventDateBox">Event Date: </label>
-        <input type="text" name="date" id="eventDateBox" placeholder="Write Date in your format here..."><br>
+        <label for="eventDateBox" id="eventDateBox">Event Date: </label>
+        <input type="text" name="date" id="date" placeholder="Write Date in your format here..."><br>
         <label for="eventLocationBox">Event Location (Optional): </label>
         <input type="text" name="location" id="eventLocationBox" placeholder="Location of event"><br>
         <label for="descriptionBox">Add A Description (Optional): </label>
         <textarea name="description" id="descriptionBox" rows="4" cols="40" placeholder="Add an optional message"></textarea>
+        <br>
         <input type="submit" value="Create Event" name="submit" id="submitBtn">
     </form>
     <div class="iconBodyHeader">

@@ -81,8 +81,8 @@ if ($result = $event_details_sql->get_result()) {
         <p>Event Location: <strong><?php echo $event_location ?></strong></p>
         <p>You made event at: <strong><?php echo $date_created ?></strong></p>
         <p>Additional Description: <strong><?php echo $description ?></strong></p>
-        <div class="continuebtn">
-            <button class="continue" id="editEventButton" onclick="edit_event()">Edit</button>
+        <div class="editBtnDiv">
+            <button class="editBtn" id="editEventButton" onclick="edit_event()">Edit</button>
         </div>
     </div>
     <div class="eventDetails" id="editingEvtDetails">

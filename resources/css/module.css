@@ -1,6 +1,51 @@
 textarea {
-    background-color: floralwhite;
-    border: 1px solid black;
+    background-color: white;
     border-radius: 3px;
     resize: none;
+    border: none;
+}
+
+textarea:focus {
+    border-bottom: 2px solid orange;
+}
+
+form {
+    align-content: center;
+    background-color: ghostwhite;
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1.5em;
+    border: none;
+    border-radius: 0.5em;
+}
+
+form input {
+    margin-bottom: 2em;
+    background-color: white;
+    border-radius: 3px;
+    resize: none;
+    padding: 0.5em;
+    border: none;
+}
+
+form input:focus {
+    border-bottom: 2px solid orange;
+}
+
+form input[type=submit] {
+    margin-top: 1em;
+    margin-left: 3em;
+    background-color: mediumspringgreen;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5em 1.5em 0.5em 1.5em;
+    box-shadow: 2px 2px;
+}
+
+form input[type=submit]:hover {
+    box-shadow: 1px 1px;
+}
+
+form label {
+    margin-left: 1em;
 }

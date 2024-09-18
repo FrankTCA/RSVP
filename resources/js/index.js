@@ -46,6 +46,7 @@ function print_event(id, name, location, date, description, responses, attendees
 }
 
 $(document).ready(function() {
+    $("#date").datepicker();
     let xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (this.readyState === 4) {
