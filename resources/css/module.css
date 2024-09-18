@@ -49,3 +49,23 @@ form input[type=submit]:hover {
 form label {
     margin-left: 1em;
 }
+
+.editBtn {
+    border: 2px solid mediumspringgreen;
+    background-color: white;
+    padding: 0.5em 1em 0.5em 1em;
+    font-family: Roboto, sans-serif;
+    margin-left: 3em;
+    box-shadow: 2px 2px;
+}
+
+.editBtn:hover {
+    border: none;
+    background-color: mediumspringgreen;
+    box-shadow: 1px 1px;
+}
+
+.editBtnDiv {
+    width: 50%;
+    align-content: center;
+}

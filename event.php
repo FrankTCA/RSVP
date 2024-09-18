@@ -93,8 +93,8 @@ if ($result = $event_details_sql->get_result()) {
             <p>Event Location: <input type="text" value="<?php echo $event_location ?>" name="location"</p>
             <p>You made event at: <strong><?php echo $date_created ?></strong></p>
             <p>Additional Description: <textarea name="description" rows="4" cols="40"><?php echo $description ?></textarea></p>
-            <div class="continuebtn">
-                <input type="submit" class="continue" name="submit" id="editEvtSubmitButton" value="Edit">
+            <div class="editBtnDiv">
+                <input type="submit" class="editBtn" name="submit" id="editEvtSubmitButton" value="Edit">
             </div>
         </form>
     </div>
