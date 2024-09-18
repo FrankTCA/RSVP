@@ -1,0 +1,9 @@
+.tools {
+    font-family: Krungthep, Arial, sans-serif;
+    font-size: 20px;
+}
+
+.tools a {
+    color: blue;
+    text-decoration-line: none;
+}
