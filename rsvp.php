@@ -2,12 +2,12 @@
 require "creds.php";
 require "action/common.php";
 
-if (!isset($GET["t"])) {
+if (!isset($_GET["t"])) {
     http_response_code(400);
     die("Token not set! Please copy the whole link, including the text after ?t=");
 }
 
-$token = $GET["t"];
+$token = $_GET["t"];
 
 $conn = mysqli_connect(get_database_host(), get_database_user(), get_database_password(), get_database_db());
 if ($conn->connect_error) {
