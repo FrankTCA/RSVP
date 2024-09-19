@@ -13,6 +13,10 @@ function display_attendees() {
     }
 }
 
+function display_note(text) {
+    alert(text);
+}
+
 function display_attendee(attendee) {
     let attendee_name = attendee.name;
     let attendee_token = attendee.token;
@@ -76,7 +80,7 @@ function print_attendee(name, token, accessed, time_accessed, country, response,
     let response_readable = get_response_human_readable(response);
     var responseNoteString;
     if (note != null) {
-        responseNoteString = "<a class='responseNoteLink' href='javascript:display_note(" + note + ")'>Read Response Note</a>";
+        responseNoteString = "<a class='responseNoteLink' href='javascript:display_note(\"" + note + "\")'>Read Response Note</a>";
     } else {
         responseNoteString = "No note left.";
     }

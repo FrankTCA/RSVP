@@ -10,7 +10,7 @@ if (!(isset($_POST["event_id"]) && isset($_POST["attendee_id"]) && isset($_POST[
 $event_id = $_POST["event_id"];
 $attendee_id = $_POST["attendee_id"];
 $response = $_POST["response"];
-$message = $_POST["message"];
+$message = $_POST["message"] ?? null;
 
 if ($message != null) {
     $message = htmlspecialchars($message);
@@ -45,7 +45,7 @@ if (!$check_passed) {
 }
 
 $sql = $conn->prepare("UPDATE attendees SET time_accessed = CURRENT_TIMESTAMP, response = ?, response_note = ? WHERE id = ?;");
-$sql->bind_param("isi", $response, $response_message, $attendee_id);
+$sql->bind_param("isi", $response, $message, $attendee_id);
 $sql->execute();
 
 $conn->close();

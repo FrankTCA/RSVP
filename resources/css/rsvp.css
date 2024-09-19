@@ -1,13 +1,14 @@
 .btn-group button {
-    background-color: floralwhite;
-    border: 1px solid black;
+    background-color: white;
+    border: 1px solid lawngreen;
     padding: 10px 24px;
     cursor: pointer;
     float: left;
+    border-right: none;
 }
 
-.btn-group button:not(:last-child) {
-    border-right: none;
+.btn-group button:hover {
+    background-color: lawngreen;
 }
 
 .btn-group:after {
@@ -17,10 +18,11 @@
 }
 
 .btn-group {
-    border: 1px solid black;
+    border: 2px solid lawngreen;
     border-radius: 7px;
+    width: fit-content;
 }
 
-.btn-group:hover {
-    background-color: grey;
+body {
+    font-family: Roboto, Arial, sans-serif;
 }
