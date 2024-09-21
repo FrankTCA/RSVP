@@ -104,10 +104,7 @@ function send_invite() {
 
     $.post("https://infotoast.org/rsvp/action/add_attendee.php", {event_id: event_id, name: inviteeName, email: inviteeEmail}, function(data, status) {
         if (data.startsWith("success")) {
-            let splitResponse = data.split(",");
-            let new_token = splitResponse[2];
-            add_attendee(inviteeName, new_token, "Now");
-            display_attendee(global_attendees[attendees_count-1]);
+            window.location.reload();
         }
     });
 }
@@ -127,16 +124,4 @@ $(document).ready(function() {
     const event_id = document.getElementById("eventIdHiddenField").value;
     xhr.open("GET", "https://infotoast.org/rsvp/action/get_attendees_info.php?event_id=" + event_id, true);
     xhr.send();
-
-    $(".clickToCopy").onclick(function() {
-        $(this).select();
-        $(this).setSelectionRange(0, 99999);
-        let toCopy = $(this).value();
-        let element = $(this);
-        navigator.clipboard.writeText(toCopy);
-        $(this).value = "Copied!";
-        setTimeout(function() {
-            element.value = toCopy;
-        }, 2000);
-    })
 });
