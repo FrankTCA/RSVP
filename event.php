@@ -21,8 +21,8 @@ if ($conn->connect_error) {
 }
 
 // Get event details
-$event_details_sql = $conn->prepare("SELECT * FROM events WHERE id = ?");
-$event_details_sql->bind_param("i", $event_id);
+$event_details_sql = $conn->prepare("SELECT * FROM events WHERE id = ? AND user_id = ?;");
+$event_details_sql->bind_param("ii", $event_id, $uid);
 $event_details_sql->execute();
 
 $event_name = null;
@@ -48,6 +48,7 @@ if ($result = $event_details_sql->get_result()) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="resources/css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="/global-resources/mallory.css">
     <link rel="stylesheet" type="text/css" href="resources/css/global.css">
     <link rel="stylesheet" type="text/css" href="resources/css/module.css">
     <link rel="stylesheet" type="text/css" href="resources/css/events.css">

@@ -31,7 +31,7 @@ function display_event(event) {
     let evt_date = event.date;
     let evt_desc = event.description;
     let evt_responses = event.responses;
-    let evt_attendees = event.responses;
+    let evt_attendees = event.attendees;
     print_event(evt_id, evt_name, evt_loc, evt_date, evt_desc, evt_responses, evt_attendees);
 }
 
